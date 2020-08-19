@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.menu {
+  background: #58f;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0px;
+  color: white;
+  font-style: italic;
+}
+
+.card {
+  background: white;
+  font-weight: bolder;
+  font-size: 3rem;
+  margin: 5rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 0 50px rgb(140, 171, 196);
+}
+
+.button {
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 25px;
+  border-radius: 20%;
+  margin: 1rem;
+  box-shadow: 0 0 50px rgb(140, 171, 196);
+}

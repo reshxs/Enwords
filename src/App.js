@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import MenuBar from './menu/MenuBar'
+import Card from './cards/Card'
+import TranslatedCard from './cards/TranslatedCard'
 import './App.css';
 
 function App() {
+  const [card, setCard] = React.useState({
+      title: "Car", 
+      translation:"Машина", 
+      translated: false
+    })
+
+  function click_card() {
+    setCard({
+        title: card.title, 
+        translation: card.translation, 
+        translated: !card.translated
+      })
+  }
+
+  function switch_card() {
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <MenuBar />
+        {
+          !card.translated 
+          ? (<Card card={card} onClick={click_card}/>) 
+          : <TranslatedCard 
+              card={card} 
+              onYesClick={switch_card}
+              onNoClick={switch_card}
+            />
+        }
     </div>
   );
 }
 
-export default App;
+export default App
