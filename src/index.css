@@ -30,10 +30,13 @@ code {
   margin-right: 25%;
   padding-top: 50px;
   padding-bottom: 50px;
-
   border: none;
   border-radius: 25px;
   box-shadow: 0 0 50px rgb(140, 171, 196);
+}
+
+.card:hover {
+  background: #eee;
 }
 
 .button {
@@ -44,4 +47,8 @@ code {
   border-radius: 20%;
   margin: 1rem;
   box-shadow: 0 0 50px rgb(140, 171, 196);
+}
+
+.button:hover{
+  padding: 30px;
 }
