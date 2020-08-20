@@ -3,7 +3,7 @@ import React from 'react'
 function Card(prop){
     return (
         <div className="card" onClick={prop.onClick}>
-            <h1>{ prop.card.title }</h1>
+            <h1 className="card-text">{ prop.card.title }</h1>
         </div>      
     )
 }

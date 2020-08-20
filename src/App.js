@@ -20,6 +20,7 @@ function App() {
   }
 
   function switch_card() {
+    click_card()
   }
 
   return (

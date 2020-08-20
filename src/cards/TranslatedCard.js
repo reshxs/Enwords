@@ -4,8 +4,8 @@ import React from 'react'
 function TranslatedCard (prop) {
     return (
         <div>
-            <div className="card">
-                <h1>{ prop.card.translation }</h1>
+            <div className="translated-card">
+                <h1 className="card-text">{ prop.card.translation }</h1>
             </div>
             <span>
                 {/* NO */}

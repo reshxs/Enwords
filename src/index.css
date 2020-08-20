@@ -17,21 +17,19 @@ code {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0px;
+  margin-bottom: 5rem;
   color: white;
   font-style: italic;
 }
 
+/* Card */
 .card {
   background: white;
-  font-weight: bolder;
-  font-size: 3rem;
-  margin: 5rem;
-  margin-left: 25%;
-  margin-right: 25%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border: none;
-  border-radius: 25px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 30px;
   box-shadow: 0 0 50px rgb(140, 171, 196);
 }
 
@@ -39,16 +37,35 @@ code {
   background: #eee;
 }
 
-.button {
-  border: none;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 25px;
-  border-radius: 20%;
-  margin: 1rem;
+.translated-card {
+  background: white;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 30px;
   box-shadow: 0 0 50px rgb(140, 171, 196);
 }
 
+.card-text {
+  padding: 3em 0;
+  text-align: center;
+}
+
+/* Button */
+
+.button {
+  border: none;
+  margin: 0 auto;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgb(140, 171, 196);
+  transition: width 0.1s linear;
+  transition: height 0.1s linear;
+}
+
 .button:hover{
-  padding: 30px;
+  width: 75px;
+  height: 55px;
 }
