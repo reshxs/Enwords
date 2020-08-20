@@ -7,17 +7,9 @@ function TranslatedCard (prop) {
             <div className="translated-card">
                 <h1 className="card-text">{ prop.card.translation }</h1>
             </div>
-            <span>
-                {/* NO */}
-                <button className="button" style={{background: '#f55'}} onClick={prop.onNoClick}>
-                    &#65794;
-                </button>
-                
-                {/* YES */}
-                <button className="button" style={{background: '#5f5'}} onClick={prop.onNoClick}>
-                    &#10003;
-                </button>
-            </span>
+            <button className="button" style={{background: "#58f"}} onClick={prop.onNoClick}>
+                <h1 className="button-text">OK</h1>
+            </button>
         </div>
     )
 }
