@@ -20,7 +20,11 @@ function App() {
   }
 
   function switch_card() {
-    click_card()
+    setCard({
+      title: "Fish",
+      translation: "Рыба",
+      translated: false
+    })
   }
 
   return (
