@@ -1,13 +1,23 @@
-import React from 'react';
+import React from 'react'
 import MenuBar from './menu/MenuBar'
 import Card from './cards/Card'
 import TranslatedCard from './cards/TranslatedCard'
-import './App.css';
+import './App.css'
 
 function App() {
+  const [index, setIndex] = React.useState(0)
+
+  const words = [
+    {title: "car", translation: "машина"},
+    {title: "fish", translation: "рыба"},
+    {title: "stone", translation: "камень"},
+    {title: "phone", translation: "телефон"},
+    {title: "laptop", translation: "ноутбук"},
+  ]
+
   const [card, setCard] = React.useState({
-      title: "Car", 
-      translation:"Машина", 
+      title: words[index].title, 
+      translation:words[index].translation, 
       translated: false
     })
 
@@ -20,9 +30,15 @@ function App() {
   }
 
   function switch_card() {
+    setIndex(index + 1)
+
+    if(index >= words.length - 1){
+      setIndex(0)
+    }
+
     setCard({
-      title: "Fish",
-      translation: "Рыба",
+      title: words[index].title, 
+      translation:words[index].translation, 
       translated: false
     })
   }
