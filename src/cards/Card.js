@@ -1,9 +1,10 @@
 import React from 'react'
+import CardBase from './CardBase'
 
 function Card(prop){
     return (
-        <div className="card" onClick={prop.onClick}>
-            <h1 className="card-text">{ prop.card.title }</h1>
+        <div onClick={prop.onClick}>
+            <CardBase title={prop.card.title} class="card"/>
         </div>      
     )
 }
