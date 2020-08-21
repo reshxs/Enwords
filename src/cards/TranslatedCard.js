@@ -8,7 +8,7 @@ function TranslatedCard (prop) {
                 <h1 className="card-text">{ prop.card.translation }</h1>
             </div>
             <button className="button" style={{background: "#58f"}} onClick={prop.onNoClick}>
-                <h1 className="button-text">OK</h1>
+                <p className="button-text">OK</p>
             </button>
         </div>
     )

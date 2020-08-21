@@ -78,7 +78,12 @@ code {
   height: 55px;
 }
 
+.button:active, button:focus {
+  outline: none;
+}
+
 .button-text {
   color: white;
+  font-weight: bolder;
   text-align: center;
 }
