@@ -1,27 +1,19 @@
 import React from 'react'
-import MenuBar from './menu/MenuBar'
-import Card from './cards/Card'
-import TranslatedCard from './cards/TranslatedCard'
+import MenuBar from './Menu/MenuBar'
+import Card from './Cards/Card'
+import TranslatedCard from './Cards/TranslatedCard'
 import './App.css'
 
 function App() {
   const [index, setIndex] = React.useState(0)
-
-  const words = [
-    {title: "car", translation: "машина"},
-    {title: "fish", translation: "рыба"},
-    {title: "stone", translation: "камень"},
-    {title: "phone", translation: "телефон"},
-    {title: "laptop", translation: "ноутбук"},
-  ]
-
+  const words = require('./Dictionary/Dictionary.json')
   const [card, setCard] = React.useState({
-      title: words[index].title, 
-      translation:words[index].translation, 
+      title: words[index].en, 
+      translation:words[index].ru, 
       translated: false
     })
 
-  /* Function colled when user click on card */
+  /* Function called when user click on card */
   function click_card() {
     setCard({
         title: card.title, 
@@ -41,8 +33,8 @@ function App() {
     console.log(index)
 
     setCard({
-      title: words[index].title, 
-      translation:words[index].translation, 
+      title: words[index].en, 
+      translation:words[index].ru, 
       translated: false
     })
   }
