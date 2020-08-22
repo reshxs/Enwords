@@ -7,7 +7,7 @@ function TranslatedCard (prop) {
         <div onClick={prop.onClick}>
             <CardBase title={prop.card.translation} class="card nohover"/>
 
-            <button className="button" style={{background: "#58f"}} onClick={prop.onNoClick}>
+            <button style={{background: "#58f"}} onClick={prop.onNoClick}>
                 <p className="button-text">OK</p>
             </button>
         </div>

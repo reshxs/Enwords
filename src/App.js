@@ -67,7 +67,7 @@ function App() {
               card={card} 
               onYesClick={click_yes}
               onNoClick={click_no}
-              onClick={switch_card}
+              onClick={switch_card  }
             />
         }
     </div>
