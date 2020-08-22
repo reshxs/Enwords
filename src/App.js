@@ -5,13 +5,13 @@ import TranslatedCard from './Cards/TranslatedCard'
 import './App.css'
 
 function App() {
-  const [index, setIndex] = React.useState(0)
   const words = require('./Dictionary/Dictionary.json')
   const [card, setCard] = React.useState({
-      title: words[index].en, 
-      translation:words[index].ru, 
+      title: words[0].en, 
+      translation:words[0].ru, 
       translated: false
     })
+  const [index, setIndex] = React.useState(1)
 
   /* Function called when user click on card */
   function click_card() {
