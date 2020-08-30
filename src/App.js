@@ -6,12 +6,18 @@ import './App.css'
 
 function App() {
   const words = require('./Dictionary/Dictionary.json')
+
+  {/* Function return random index from range of words list */}
+  function getRandomIndex() {
+    return Math.round(Math.random() * words.length)
+  }
+
+  const [index, setIndex] = React.useState(getRandomIndex())
   const [card, setCard] = React.useState({
-      title: words[0].en, 
-      translation:words[0].ru, 
+      title: words[index].en, 
+      translation:words[index].ru, 
       translated: false
     })
-  const [index, setIndex] = React.useState(1)
 
   /* Function called when user click on card */
   function click_card() {
@@ -24,19 +30,16 @@ function App() {
 
   /* Functions switches card to another word */
   function switch_card() {
-    setIndex(index + 1)
-
-    if(index >= words.length - 1){
-      setIndex(0)
-    }
-
-    console.log(index)
+    setIndex(getRandomIndex())
 
     setCard({
       title: words[index].en, 
       translation:words[index].ru, 
       translated: false
     })
+    
+    {/* Remove this after debug!!!!! */}
+    console.log(index)
   }
 
   /* Called when user click yes button */
