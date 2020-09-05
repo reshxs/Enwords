@@ -14,7 +14,7 @@ function TranslatedCard (prop) {
                 </button>
 
                 {/* Yes button */}
-                <button onClick={prop.onYesclick} className="green-button">
+                <button onClick={prop.onYesClick} className="green-button">
                     <p className="button-text">OK</p>
                 </button>
             </span>
